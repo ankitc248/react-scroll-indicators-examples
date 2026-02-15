@@ -20,15 +20,14 @@ npm run preview
 
 ## Deploy to GitHub Pages
 
-**Why you see a 404 for `/src/main.tsx`:** GitHub Pages was serving your **source** files. The browser requested `/src/main.tsx` (from your root `index.html`), but that path doesn’t exist in the built site. You must deploy the **built** output (the `dist` folder), not the repo root.
+Build output is set to the `docs` folder so you can deploy from a branch:
 
-This repo includes a workflow that builds and deploys for you:
+1. Run **`npm run build`** (writes to `docs/`).
+2. Commit and push the **`docs`** folder (it is not in `.gitignore`).
+3. In the repo **Settings → Pages**, set **Source** to **Deploy from a branch**, branch **main** (or **master**), folder **/docs**.
+4. Save. The site will be at `https://ankitc248.github.io/react-scroll-indicators-examples/`.
 
-1. In **Settings → Pages**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
-2. Push to `main` (or `master`). The workflow runs `npm run build` and deploys the `dist` folder.
-3. Your site will be at `https://ankitc248.github.io/react-scroll-indicators-examples/`.
-
-If you deploy manually: run `npm run build` and upload only the **contents** of `dist` (e.g. to a `gh-pages` branch or via the [gh-pages](https://www.npmjs.com/package/gh-pages) package). In `vite.config.ts`, keep `repoName` matching your repo name so asset paths use the correct base.
+After any change, run `npm run build` again and commit the updated `docs` folder.
 
 ## Examples in this app
 

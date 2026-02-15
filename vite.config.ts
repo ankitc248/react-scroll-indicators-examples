@@ -7,5 +7,8 @@ const repoName = 'react-scroll-indicators-examples'
 
 export default defineConfig({
   base: `/${repoName}/`,
+  build: {
+    outDir: 'docs',
+  },
   plugins: [react()],
 })
