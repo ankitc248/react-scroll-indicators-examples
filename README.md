@@ -9,8 +9,6 @@ npm install
 npm run dev
 ```
 
-Open the URL shown in the terminal (e.g. http://localhost:5173).
-
 ## Build
 
 ```bash
@@ -19,13 +17,6 @@ npm run preview
 ```
 
 ## Deploy to GitHub Pages
-
-Build output is set to the `docs` folder so you can deploy from a branch:
-
-1. Run **`npm run build`** (writes to `docs/`).
-2. Commit and push the **`docs`** folder (it is not in `.gitignore`).
-3. In the repo **Settings → Pages**, set **Source** to **Deploy from a branch**, branch **main** (or **master**), folder **/docs**.
-4. Save. The site will be at `https://ankitc248.github.io/react-scroll-indicators-examples/`.
 
 After any change, run `npm run build` again and commit the updated `docs` folder.
 
